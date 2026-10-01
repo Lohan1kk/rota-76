@@ -51,7 +51,7 @@ export default function OpengraphImage() {
 
         <div style={{ display: "flex", gap: 40, fontSize: 28, color: "rgba(243,236,224,0.85)" }}>
           <div style={{ display: "flex" }}>4,6 estrelas no Google</div>
-          <div style={{ display: "flex" }}>Abre às 18:00</div>
+          <div style={{ display: "flex" }}>Ter. a dom. · 18h às 23h30</div>
           <div style={{ display: "flex" }}>(11) 96640-2249</div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { WhatsAppIcon } from "@/components/brand-icons";
 import { easeOutExpo } from "@/components/motion";
 import { Button } from "@/components/ui/button";
-import { site } from "@/lib/site";
+import { formatHours, site } from "@/lib/site";
 
 const container: Variants = {
   hidden: {},
@@ -116,7 +116,7 @@ export function Hero() {
             </li>
             <li className="flex items-center gap-2.5">
               <Clock className="size-4 text-primary" aria-hidden="true" />
-              Abre às {site.hours.opensAt}
+              {site.hours.daysShort} · {formatHours()}
             </li>
             <li className="flex items-center gap-2.5">
               <Truck className="size-4 text-primary" aria-hidden="true" />

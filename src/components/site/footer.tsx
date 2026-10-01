@@ -41,12 +41,16 @@ export function Footer() {
           <h2 className="text-[11px] font-semibold uppercase tracking-eyebrow text-muted-foreground">Visite</h2>
           <address className="mt-5 space-y-3 text-sm not-italic leading-relaxed text-foreground/80">
             <p>{site.address.full}</p>
-            <p>
-              <a href={`tel:${site.phone.tel}`} className="transition-colors hover:text-primary">
-                {site.phone.display}
-              </a>
+            <p className="flex flex-wrap gap-x-3">
+              {[site.phone, ...site.landlines].map((line) => (
+                <a key={line.tel} href={`tel:${line.tel}`} className="tabular-nums transition-colors hover:text-primary">
+                  {line.display}
+                </a>
+              ))}
             </p>
-            <p className="text-muted-foreground">{formatHours()}</p>
+            <p className="text-muted-foreground">
+              {site.hours.days}, {formatHours()}
+            </p>
           </address>
         </div>
       </div>

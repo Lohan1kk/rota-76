@@ -59,12 +59,24 @@ export function Location() {
                 <a href={`tel:${site.phone.tel}`} className="rounded-sm text-lg font-medium tabular-nums underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                   {site.phone.display}
                 </a>
+                <span className="mt-1 flex flex-wrap gap-x-3 text-sm text-muted-foreground">
+                  Fixo:
+                  {site.landlines.map((line) => (
+                    <a
+                      key={line.tel}
+                      href={`tel:${line.tel}`}
+                      className="rounded-sm tabular-nums text-foreground/80 underline-offset-4 hover:text-foreground hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      {line.display}
+                    </a>
+                  ))}
+                </span>
               </InfoRow>
 
               <InfoRow icon={<Clock />} label="Horário">
-                {site.hours.days ? <span className="block">{site.hours.days}</span> : null}
+                <span className="block">{site.hours.days}</span>
                 <span className="block">{formatHours()}</span>
-                <span className="mt-1 block text-sm text-muted-foreground">Fechado durante o dia</span>
+                <span className="mt-1 block text-sm text-muted-foreground">{site.hours.closedNote}</span>
               </InfoRow>
 
               <InfoRow icon={<UtensilsCrossed />} label="Atendimento">

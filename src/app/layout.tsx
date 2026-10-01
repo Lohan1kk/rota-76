@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 
 const title = "Rota da Pizza 76 | Pizzaria no Brás, São Paulo";
 const description =
-  "A melhor pizzaria do Brás, Mooca e região. Ingredientes de primeira, espaço familiar com lareira, delivery e retirada. Peça pelo WhatsApp: (11) 96640-2249.";
+  "A melhor pizzaria do Brás, Mooca e região. 55 sabores, espaço familiar com lareira, delivery e retirada. Terça a domingo, 18h às 23h30. WhatsApp: (11) 96640-2249.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -68,6 +68,8 @@ const jsonLd = {
   telephone: site.phone.tel,
   servesCuisine: ["Pizza", "Italiana"],
   priceRange: "R$ 40–60",
+  openingHours: site.hours.schema,
+  menu: `${site.url}/#cardapio`,
   acceptsReservations: false,
   hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address.full)}`,
   sameAs: [site.instagram.url],

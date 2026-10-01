@@ -25,8 +25,8 @@ export function FinalCta() {
             Bateu a fome? <em className="whitespace-nowrap font-normal text-primary">A gente leva</em> até você.
           </h2>
           <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-wine-foreground/70 sm:text-lg">
-            Faça seu pedido pelo WhatsApp a partir das {site.hours.opensAt}. Delivery rápido no Brás, na Mooca e região,
-            ou retire no balcão.
+            Peça pelo WhatsApp de {site.hours.days.toLowerCase()}, das {site.hours.opensAt} às {site.hours.closesAt}.
+            Delivery rápido no Brás, na Mooca e região, ou retire no balcão.
           </p>
         </Reveal>
 
@@ -55,6 +55,14 @@ export function FinalCta() {
             <a href={`tel:${site.phone.tel}`} className="font-medium text-wine-foreground underline-offset-4 hover:underline">
               {site.phone.display}
             </a>
+            {site.landlines.map((line) => (
+              <span key={line.tel}>
+                {" · "}
+                <a href={`tel:${line.tel}`} className="font-medium text-wine-foreground underline-offset-4 hover:underline">
+                  {line.display}
+                </a>
+              </span>
+            ))}
           </p>
         </Reveal>
       </div>
