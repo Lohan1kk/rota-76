@@ -46,10 +46,13 @@ export function About() {
                 <>
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_100%,hsl(22_90%_48%/0.55),transparent_70%)]" />
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_35%_at_50%_100%,hsl(40_95%_60%/0.35),transparent_70%)]" />
-                  <Flame
-                    aria-hidden="true"
-                    strokeWidth={0.75}
-                    className="absolute bottom-[14%] left-1/2 size-28 -translate-x-1/2 text-primary/70"
+                  <Image
+                    src={site.emblem}
+                    alt="Emblema da Rota da Pizza 76"
+                    width={1024}
+                    height={1024}
+                    sizes="(min-width: 1024px) 26vw, 60vw"
+                    className="absolute bottom-[6%] left-1/2 w-[64%] -translate-x-1/2 opacity-90 mix-blend-screen"
                   />
                 </>
               )}

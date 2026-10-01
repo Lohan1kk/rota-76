@@ -35,6 +35,7 @@ export const site = {
     closesAt: "23:30",
     schema: "Tu-Su 18:00-23:30",
   },
+  emblem: "/images/emblema-rota76.jpg",
   // Caminhos de fotos reais em /public (ex.: "/images/hero.jpg"). Sem foto, o site usa a textura padrão.
   images: {
     hero: null as string | null,
