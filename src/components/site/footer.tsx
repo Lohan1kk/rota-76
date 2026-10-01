@@ -1,5 +1,6 @@
+import Image from "next/image";
+
 import { InstagramIcon, WhatsAppIcon } from "@/components/brand-icons";
-import { Logo } from "@/components/logo";
 import { formatHours, navLinks, site } from "@/lib/site";
 
 const socialClass =
@@ -10,7 +11,7 @@ export function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="container grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <Logo />
+          <Image src={site.emblem} alt="Emblema da Rota da Pizza 76" width={120} height={120} className="size-28 opacity-90" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Pizzaria no Brás com espaço familiar, lareira no salão, delivery e retirada no local.
           </p>

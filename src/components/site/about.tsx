@@ -35,13 +35,16 @@ export function About() {
             />
             <figure className="grain relative aspect-[4/5] overflow-hidden rounded-lg bg-wine-deep">
               {site.images.about ? (
-                <Image
-                  src={site.images.about}
-                  alt="Salão da Rota da Pizza 76 com lareira"
-                  fill
-                  sizes="(min-width: 1024px) 40vw, 90vw"
-                  className="object-cover"
-                />
+                <>
+                  <Image
+                    src={site.images.about}
+                    alt="Pizza de rúcula com borda recheada servida à mesa, com a lareira acesa ao fundo"
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-black/80 via-black/45 to-transparent" />
+                </>
               ) : (
                 <>
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_100%,hsl(22_90%_48%/0.55),transparent_70%)]" />
@@ -49,10 +52,10 @@ export function About() {
                   <Image
                     src={site.emblem}
                     alt="Emblema da Rota da Pizza 76"
-                    width={1024}
-                    height={1024}
+                    width={720}
+                    height={720}
                     sizes="(min-width: 1024px) 26vw, 60vw"
-                    className="absolute bottom-[6%] left-1/2 w-[64%] -translate-x-1/2 opacity-90 mix-blend-screen"
+                    className="absolute bottom-[6%] left-1/2 w-[64%] -translate-x-1/2 opacity-90"
                   />
                 </>
               )}

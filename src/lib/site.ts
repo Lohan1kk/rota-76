@@ -35,11 +35,12 @@ export const site = {
     closesAt: "23:30",
     schema: "Tu-Su 18:00-23:30",
   },
-  emblem: "/images/emblema-rota76.jpg",
-  // Caminhos de fotos reais em /public (ex.: "/images/hero.jpg"). Sem foto, o site usa a textura padrão.
+  emblem: "/images/emblema-rota76-claro.png",
+  // Imagens em /public/images. Troque pelos caminhos de fotos reais quando tiver; com `null`, o site usa a textura padrão.
   images: {
-    hero: null as string | null,
-    about: null as string | null,
+    hero: "/images/hero-pizza.jpg" as string | null,
+    about: "/images/sobre-lareira.jpg" as string | null,
+    cta: "/images/cta-fatia.jpg" as string | null,
   },
   services: ["Comer no local", "Delivery", "Pedir e retirar"],
 } as const;

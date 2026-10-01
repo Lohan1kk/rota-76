@@ -9,6 +9,7 @@ import { WhatsAppIcon } from "@/components/brand-icons";
 import { easeOutExpo } from "@/components/motion";
 import { Button } from "@/components/ui/button";
 import { formatHours, site } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 const container: Variants = {
   hidden: {},
@@ -31,9 +32,19 @@ export function Hero() {
     <section
       id="inicio"
       ref={ref}
-      className="grain relative flex min-h-[100svh] items-end overflow-hidden bg-background pb-14 pt-32 sm:items-center sm:pb-20"
+      className={cn(
+        "grain relative flex min-h-[100svh] items-end overflow-hidden bg-background pb-14 lg:items-center lg:pb-20 lg:pt-32",
+        site.images.hero ? "pt-[46svh] sm:pt-[50svh]" : "pt-32 sm:items-center sm:pb-20",
+      )}
     >
-      <motion.div aria-hidden="true" className="absolute inset-0 -z-20" style={{ y: bgY }}>
+      <motion.div
+        aria-hidden="true"
+        className={cn(
+          "absolute -z-20",
+          site.images.hero ? "inset-x-0 top-0 h-[64svh] sm:h-[68svh] lg:inset-0 lg:h-auto" : "inset-0",
+        )}
+        style={{ y: bgY }}
+      >
         {site.images.hero ? (
           <>
             <Image
@@ -42,10 +53,10 @@ export function Hero() {
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-[86%_center] lg:object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background from-10% via-background/40 via-45% to-background/50 lg:from-0% lg:via-background/25 lg:via-50% lg:to-transparent" />
+            <div className="absolute inset-0 hidden bg-gradient-to-r from-background via-background/70 to-transparent lg:block" />
           </>
         ) : (
           <>
@@ -56,13 +67,15 @@ export function Hero() {
         )}
       </motion.div>
 
-      <motion.span
-        aria-hidden="true"
-        style={{ y: numeralY }}
-        className="pointer-events-none absolute -right-[6vw] bottom-[-6vw] -z-10 select-none font-serif text-[62vw] font-semibold italic leading-none text-transparent [-webkit-text-stroke:1px_hsl(var(--primary)/0.18)] sm:text-[46vw] lg:-right-[2vw] lg:text-[38vw]"
-      >
-        76
-      </motion.span>
+      {site.images.hero ? null : (
+        <motion.span
+          aria-hidden="true"
+          style={{ y: numeralY }}
+          className="pointer-events-none absolute -right-[6vw] bottom-[-6vw] -z-10 select-none font-serif text-[62vw] font-semibold italic leading-none text-transparent [-webkit-text-stroke:1px_hsl(var(--primary)/0.18)] sm:text-[46vw] lg:-right-[2vw] lg:text-[38vw]"
+        >
+          76
+        </motion.span>
+      )}
 
       <motion.div style={{ opacity: contentOpacity }} className="container">
         <motion.div variants={container} initial="hidden" animate="visible" className="max-w-3xl">
@@ -78,7 +91,7 @@ export function Hero() {
             variants={item}
             className="mt-6 text-balance font-serif text-[2.75rem] font-medium leading-[1.02] tracking-tight sm:text-6xl lg:text-[5.25rem]"
           >
-            Pizza feita com carinho, <em className="whitespace-nowrap font-normal text-primary">do forno</em> direto pra sua mesa.
+            Pizza feita com carinho, <em className="whitespace-nowrap font-normal text-wine-light">do forno</em> direto pra sua mesa.
           </motion.h1>
 
           <motion.p
@@ -106,7 +119,7 @@ export function Hero() {
             className="mt-14 grid grid-cols-1 gap-x-8 gap-y-3 border-t border-foreground/10 pt-6 text-sm text-foreground/70 sm:flex sm:flex-wrap"
           >
             <li className="flex items-center gap-2.5">
-              <Star className="size-4 fill-primary text-primary" aria-hidden="true" />
+              <Star className="size-4 fill-star text-star" aria-hidden="true" />
               <span>
                 <strong className="font-semibold text-foreground">
                   {site.rating.value.toLocaleString("pt-BR")}

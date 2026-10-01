@@ -52,9 +52,16 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         wine: {
           DEFAULT: "hsl(var(--wine))",
+          hover: "hsl(var(--wine-hover))",
+          light: "hsl(var(--wine-light))",
           deep: "hsl(var(--wine-deep))",
           foreground: "hsl(var(--wine-foreground))",
         },
+        cta: {
+          DEFAULT: "hsl(var(--cta))",
+          hover: "hsl(var(--cta-hover))",
+        },
+        star: "hsl(var(--star))",
         cream: {
           DEFAULT: "hsl(var(--cream))",
           foreground: "hsl(var(--cream-foreground))",

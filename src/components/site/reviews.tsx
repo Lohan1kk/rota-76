@@ -27,11 +27,11 @@ export function Reviews() {
           </h2>
 
           <div className="mt-10 flex items-end gap-5 border-t border-border pt-8 lg:flex-col lg:items-start lg:gap-3">
-            <p className="font-serif text-[5.5rem] font-medium leading-[0.85] tracking-tight text-primary sm:text-[7rem]">
+            <p className="font-serif text-[5.5rem] font-medium leading-[0.85] tracking-tight text-foreground sm:text-[7rem]">
               {site.rating.value.toLocaleString("pt-BR")}
             </p>
             <div className="pb-1">
-              <RatingStars value={site.rating.value} className="text-primary" starClassName="size-5" />
+              <RatingStars value={site.rating.value} className="text-star" starClassName="size-5" />
               <p className="mt-2 text-sm text-muted-foreground">
                 <strong className="font-semibold text-foreground">{site.rating.count} avaliações</strong> no Google
               </p>
@@ -58,7 +58,7 @@ export function Reviews() {
                   i === 0 && "bg-wine-deep/60 sm:p-10",
                 )}
               >
-                <span aria-hidden="true" className="font-serif text-5xl leading-none text-primary/60">
+                <span aria-hidden="true" className="font-serif text-5xl leading-none text-wine-light/70">
                   &ldquo;
                 </span>
                 <blockquote
