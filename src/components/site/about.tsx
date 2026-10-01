@@ -38,12 +38,12 @@ export function About() {
                 <>
                   <Image
                     src={site.images.about}
-                    alt="Pizza de rúcula com borda recheada servida à mesa, com a lareira acesa ao fundo"
+                    alt="Salão da Rota da Pizza 76, com mesas e bancos de tambor azul e paredes vermelha e verde"
                     fill
                     sizes="(min-width: 1024px) 40vw, 90vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-black/80 via-black/45 to-transparent" />
+                  <div className="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-black/85 via-black/60 via-35% to-transparent" />
                 </>
               ) : (
                 <>
@@ -64,7 +64,7 @@ export function About() {
                   R. Flora, 34 · Brás
                 </p>
                 <p className="mt-4 max-w-[15ch] font-serif text-3xl leading-[1.1] text-wine-foreground sm:text-4xl">
-                  Mesa farta, lareira acesa e cheiro de forno.
+                  Puxe um banco, a pizza já vai sair.
                 </p>
               </figcaption>
             </figure>

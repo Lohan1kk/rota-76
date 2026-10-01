@@ -21,10 +21,18 @@ export function FinalCta() {
           <div className="absolute inset-0 bg-wine-deep/80 lg:bg-transparent lg:bg-gradient-to-r lg:from-wine-deep lg:via-wine-deep/85 lg:to-wine-deep/10" />
         </div>
       ) : (
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_80%_at_100%_100%,hsl(var(--wine)/0.9),transparent_70%)]"
-        />
+        <>
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_80%_at_100%_100%,hsl(var(--wine)/0.9),transparent_70%)]"
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-[0.18em] -right-[0.04em] -z-10 select-none font-serif text-[40vw] font-semibold italic leading-none text-transparent [-webkit-text-stroke:1px_hsl(var(--wine-foreground)/0.14)] lg:text-[26vw]"
+          >
+            76
+          </span>
+        </>
       )}
 
       <div className="container grid gap-12 lg:grid-cols-12 lg:items-end">

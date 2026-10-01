@@ -34,14 +34,14 @@ export function Hero() {
       ref={ref}
       className={cn(
         "grain relative flex min-h-[100svh] items-end overflow-hidden bg-background pb-14 lg:items-center lg:pb-20 lg:pt-32",
-        site.images.hero ? "pt-[46svh] sm:pt-[50svh]" : "pt-32 sm:items-center sm:pb-20",
+        site.images.hero ? "pt-[55svh] sm:pt-[58svh]" : "pt-32 sm:items-center sm:pb-20",
       )}
     >
       <motion.div
         aria-hidden="true"
         className={cn(
           "absolute -z-20",
-          site.images.hero ? "inset-x-0 top-0 h-[64svh] sm:h-[68svh] lg:inset-0 lg:h-auto" : "inset-0",
+          site.images.hero ? "inset-x-0 top-0 h-[60svh] sm:h-[64svh] lg:inset-0 lg:h-auto" : "inset-0",
         )}
         style={{ y: bgY }}
       >
@@ -53,9 +53,9 @@ export function Hero() {
               fill
               priority
               sizes="100vw"
-              className="object-cover object-[86%_center] lg:object-center"
+              className="object-cover object-[80%_center] lg:object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background from-10% via-background/40 via-45% to-background/50 lg:from-0% lg:via-background/25 lg:via-50% lg:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/0 via-20% to-background/50 to-100% lg:via-background/20 lg:via-40% lg:to-transparent" />
             <div className="absolute inset-0 hidden bg-gradient-to-r from-background via-background/70 to-transparent lg:block" />
           </>
         ) : (

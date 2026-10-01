@@ -38,9 +38,9 @@ export const site = {
   emblem: "/images/emblema-rota76-claro.png",
   // Imagens em /public/images. Troque pelos caminhos de fotos reais quando tiver; com `null`, o site usa a textura padrão.
   images: {
-    hero: "/images/hero-pizza.jpg" as string | null,
-    about: "/images/sobre-lareira.jpg" as string | null,
-    cta: "/images/cta-fatia.jpg" as string | null,
+    hero: "/images/hero-pizza-salao.jpg" as string | null,
+    about: "/images/salao.jpg" as string | null,
+    cta: null as string | null,
   },
   services: ["Comer no local", "Delivery", "Pedir e retirar"],
 } as const;
