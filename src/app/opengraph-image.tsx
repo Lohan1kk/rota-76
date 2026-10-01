@@ -14,7 +14,7 @@ async function toDataUri(file: string, mime: string) {
 
 export default async function OpengraphImage() {
   const [photo, emblem] = await Promise.all([
-    toDataUri("hero-rota76.jpg", "image/jpeg"),
+    toDataUri("hero-rota76-animada.jpg", "image/jpeg"),
     toDataUri("emblema-rota76-claro.png", "image/png"),
   ]);
 

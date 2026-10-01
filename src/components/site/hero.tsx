@@ -55,8 +55,9 @@ export function Hero() {
               sizes="100vw"
               className="object-cover object-[80%_center] lg:object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/0 via-20% to-background/50 to-100% lg:via-background/20 lg:via-40% lg:to-transparent" />
-            <div className="absolute inset-0 hidden bg-gradient-to-r from-background via-background/70 to-transparent lg:block" />
+            <div className="absolute inset-0 bg-gradient-to-b from-wine-deep/70 via-wine-deep/0 via-40% to-transparent mix-blend-multiply lg:bg-gradient-to-br" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/0 via-[24%] to-background/40 to-100% lg:via-background/0 lg:via-[20%] lg:to-transparent" />
+            <div className="absolute inset-0 hidden bg-gradient-to-r from-background via-background/75 via-35% to-transparent lg:block" />
           </>
         ) : (
           <>

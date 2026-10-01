@@ -28,7 +28,7 @@ export function About() {
     <section id="sobre" className="relative overflow-hidden py-24 sm:py-32">
       <div className="container grid items-center gap-14 lg:grid-cols-12 lg:gap-20">
         <Reveal className="lg:col-span-5" y={32}>
-          <div className="relative mx-auto max-w-md lg:max-w-none">
+          <div className="relative mx-auto max-w-md [mask-image:linear-gradient(to_bottom,#000_58%,transparent_97%)] lg:max-w-none">
             <div
               aria-hidden="true"
               className="absolute inset-0 translate-x-3 translate-y-3 rounded-lg border border-primary/30 sm:translate-x-5 sm:translate-y-5"
@@ -43,7 +43,8 @@ export function About() {
                     sizes="(min-width: 1024px) 40vw, 90vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-black/85 via-black/60 via-35% to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-bl from-wine-deep/45 via-transparent via-50% to-transparent mix-blend-multiply" />
+                  <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-background/80 via-wine-deep/35 via-40% to-transparent" />
                 </>
               ) : (
                 <>
